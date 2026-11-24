@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alex — signalnotnoise</title>
-  <meta name="description" content="Alex builds developer tools and AI agent relays, then measures whether they actually run. Instructor at Full Sail. Outward Labs LLC and Visionary DevOps.">
+  <title>Alex | signalnotnoise</title>
+  <meta name="description" content="Technical Lead at Recursive Labs and Course Director at Full Sail University. I build developer tools, multi-agent AI systems, and live products, then measure whether they actually run. I also run Outward Labs.">
   <link rel="canonical" href="https://signalnotnoise.dev/">
   <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)">
   <!-- og-image.png is the 1200×630 social card in this folder (dark background, avatar, name, positioning line). -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://signalnotnoise.dev/">
-  <meta property="og:title" content="Alex — signalnotnoise">
-  <meta property="og:description" content="Alex builds developer tools and AI agent relays, then measures whether they actually run. Instructor at Full Sail. Outward Labs LLC and Visionary DevOps.">
+  <meta property="og:title" content="Alex | signalnotnoise">
+  <meta property="og:description" content="Technical Lead at Recursive Labs and Course Director at Full Sail University. I build developer tools, multi-agent AI systems, and live products, then measure whether they actually run. I also run Outward Labs.">
   <meta property="og:image" content="https://signalnotnoise.dev/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alex — signalnotnoise">
-  <meta name="twitter:description" content="Alex builds developer tools and AI agent relays, then measures whether they actually run. Instructor at Full Sail. Outward Labs LLC and Visionary DevOps.">
+  <meta name="twitter:title" content="Alex | signalnotnoise">
+  <meta name="twitter:description" content="Technical Lead at Recursive Labs and Course Director at Full Sail University. I build developer tools, multi-agent AI systems, and live products, then measure whether they actually run. I also run Outward Labs.">
   <meta name="twitter:image" content="https://signalnotnoise.dev/og-image.png">
   <meta name="twitter:site" content="@signaln0tn0ise">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -33,6 +33,8 @@
         <nav class="profiles" aria-label="Profiles">
           <a href="https://github.com/signalnotnoise" rel="me">GitHub</a>
           <a href="https://x.com/signaln0tn0ise" rel="me">X @signaln0tn0ise</a>
+          <a href="https://www.linkedin.com/in/signalnotnoise" rel="me">LinkedIn</a>
+          <a href="https://huggingface.co/signalNotNoise" rel="me">Hugging Face</a>
         </nav>
       </div>
       <!--
@@ -49,21 +51,58 @@
           <p class="aka">Ismael Alex Otero</p>
         </div>
       </div>
-      <!-- Positioning line is still the draft wording, for Alex to confirm or rewrite. -->
-      <p class="positioning">I build developer tools, then measure whether they actually run.</p>
-      <p class="bio">Building open-source dev tools and experiments: AI agent relays, a SwiftUI-style UI kit, and whatever I get curious about next.</p>
-      <p class="meta">Instructor at Full Sail. Runs <strong>Outward Labs LLC</strong> and <strong>Visionary DevOps</strong>.</p>
+      <p class="positioning">I build developer tools, multi-agent AI systems, and live products, then measure whether they actually run.</p>
+      <p class="meta">Technical Lead at Recursive Labs and Course Director at Full Sail University. I also run Outward Labs.</p>
     </header>
 
     <main>
-      <section aria-labelledby="work-heading">
-        <h2 id="work-heading">Work</h2>
-        <p class="cue">Start with the <a href="https://signalnotnoise.github.io/muse-chief-relay/">muse-chief-relay demo</a> (55 seconds): two agents review a PR and ship a fix.</p>
+      <section aria-labelledby="live-heading">
+        <h2 id="live-heading">Live products</h2>
+
+        <article class="project">
+          <h3>Collab</h3>
+          <p class="flags">Live · Vue · WebRTC</p>
+          <p>A realtime collaboration app (Vue and WebRTC).</p>
+          <p class="links">
+            <a href="https://collab.voizel.com">collab.voizel.com</a>
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Structure Lab</h3>
+          <p class="flags">Live · WIP</p>
+          <p>A work-in-progress app for learning data structures.</p>
+          <p class="links">
+            <a href="https://labs.voizel.com">labs.voizel.com</a>
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="oss-heading">
+        <h2 id="oss-heading">Open source</h2>
+
+        <article class="project">
+          <h3>ui-framework</h3>
+          <p class="flags">Public · C# · WPF · .NET 10</p>
+          <p>A SwiftUI-inspired C# UI kit whose first backend renders native WPF controls, with no XAML. On NuGet as <a href="https://www.nuget.org/packages/SignalNotNoise.UI">SignalNotNoise.UI</a> and <a href="https://www.nuget.org/packages/SignalNotNoise.UI.Wpf">SignalNotNoise.UI.Wpf</a>, about 800 downloads each.</p>
+          <p class="measure">
+            <span class="stat">84.1%</span>
+            <span class="stat-label">fewer component body builds</span>
+            <span class="src">Matched 50-operation comparison after mounting 1,000 rows, recorded <time datetime="2026-09-17">Sep 17, 2026</time> on .NET 10.0.12 Release (32,350 → 5,141). Elapsed time also dropped 9.9% (18.651&nbsp;s → 16.798&nbsp;s). Individual development-machine measurements, not statistical benchmarks. Source: <a href="https://github.com/signalnotnoise/ui-framework/blob/main/docs/performance-results.md">docs/performance-results.md</a>.</span>
+          </p>
+          <!-- Also measured on that same run, not shown in the card to keep one leading number: UI-thread allocations 870,091,312 → 603,782,312 bytes (30.6%). -->
+          <p class="links">
+            <a href="https://github.com/signalnotnoise/ui-framework">GitHub</a>
+            <a href="https://www.nuget.org/packages/SignalNotNoise.UI">NuGet UI</a>
+            <a href="https://www.nuget.org/packages/SignalNotNoise.UI.Wpf">NuGet Wpf</a>
+          </p>
+        </article>
 
         <article class="project">
           <h3>muse-chief-relay</h3>
-          <p class="flags">Public · AI agents · relay</p>
-          <p>A hack.chat relay so Muse and Chief can hand each other tasks, results, and opinions, without a human in the middle. The public repo ships a C# desktop bridge, a Vue browser client, and a universal Apple chat client.</p>
+          <p class="flags">Public · multi-vendor · relay</p>
+          <p>A multi-vendor agent room where Fuse (built by Meta), chief (built by xAI), and I (the human) hand each other tasks, results, and opinions.</p>
+          <p>Start with the <a href="https://signalnotnoise.github.io/muse-chief-relay/">muse-chief-relay demo</a> (55 seconds): two agents review a PR and ship a fix.</p>
           <p class="measure">
             <span class="stat">567</span>
             <span class="stat-label">test methods in 4 languages</span>
@@ -77,37 +116,62 @@
         </article>
 
         <article class="project">
-          <h3>ui-framework</h3>
-          <p class="flags">Public · C# · WPF · .NET 10</p>
-          <p>SwiftUI-style declarative UI in plain C#, rendered as native WPF controls. Experimental alpha. The runtime uses no XAML.</p>
-          <p class="measure">
-            <span class="stat">84.1%</span>
-            <span class="stat-label">fewer component body builds</span>
-            <span class="src">Matched 50-operation comparison after mounting 1,000 rows, recorded <time datetime="2026-09-17">Sep 17, 2026</time> on .NET 10.0.12 Release (32,350 → 5,141). Elapsed time also dropped 9.9% (18.651&nbsp;s → 16.798&nbsp;s). Individual development-machine measurements, not statistical benchmarks. Source: <a href="https://github.com/signalnotnoise/ui-framework/blob/main/docs/performance-results.md">docs/performance-results.md</a>.</span>
-          </p>
-          <!-- Also measured on that same run, not shown in the card to keep one leading number: UI-thread allocations 870,091,312 → 603,782,312 bytes (30.6%). -->
+          <h3>apple-mlx-foundations</h3>
+          <p>MLX-native Shap-E and TripoSR runtimes for on-device 3D generation on macOS, iOS, and visionOS.</p>
           <p class="links">
-            <a href="https://github.com/signalnotnoise/ui-framework">GitHub</a>
-            <a href="https://www.nuget.org/packages/SignalNotNoise.UI.Wpf">NuGet</a>
+            <a href="https://github.com/signalnotnoise/apple-mlx-foundations">GitHub</a>
           </p>
         </article>
 
-        <details class="private">
-          <summary>Also private</summary>
-          <ul>
-            <li><strong>wpf-smoke</strong> — Build and launch WPF apps, capture startup diagnostics, and return agent-readable results.</li>
-            <li><strong>collective-platform</strong> — Outward Labs LLC private ops: business site config, an ops relay, and a ChatBridge relay client.</li>
-            <li><strong>StructureLab</strong> — an interactive data-structures app.</li>
-            <li><strong>GuidedGrade</strong> — a local assignment-review workspace.</li>
-          </ul>
-          <!--
-            These repositories are private. Their GitHub URLs would 404 for visitors, so no repo links are listed.
-            No public metrics are cited.
-            Measured results still open: wpf-smoke startup diagnostic time, or tests passing; collective-platform agreed-wake reduction, or hook-to-relay latency.
-            Add a public StructureLab or GuidedGrade URL if visitors should be able to try them.
-          -->
-        </details>
+        <article class="project">
+          <h3>newtron</h3>
+          <p>A desktop application framework combining Electron, Vue, and Deno.</p>
+          <p class="links">
+            <a href="https://github.com/n0obscertified/newtron">GitHub</a>
+          </p>
+        </article>
       </section>
+
+      <section aria-labelledby="models-heading">
+        <h2 id="models-heading">Models on Hugging Face</h2>
+        <p class="cue">Public conversions and ports of upstream 3D models for the MLX runtimes in <a href="https://github.com/signalnotnoise/apple-mlx-foundations">apple-mlx-foundations</a>.</p>
+
+        <article class="project">
+          <h3>TripoSR MLX</h3>
+          <p>A format and layout conversion of Stability AI's <a href="https://huggingface.co/stabilityai/TripoSR">TripoSR</a> image-to-3D weights for the MLX Swift runtime, with no training or fine-tuning.</p>
+          <p class="links">
+            <a href="https://huggingface.co/signalNotNoise/triposr-mlx">Hugging Face</a>
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Shap-E MLX</h3>
+          <p>An independent port of OpenAI's <a href="https://github.com/openai/shap-e">Shap-E</a> and CLIP ViT-L/14 weights for custom Python MLX and Swift runtimes on Apple Silicon, for text-to-3D and image-to-3D (v0.1.0 release candidate, not affiliated with OpenAI or Apple).</p>
+          <p class="links">
+            <a href="https://huggingface.co/signalNotNoise/shap-e-mlx">Hugging Face</a>
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="stack-heading">
+        <h2 id="stack-heading">Stack</h2>
+        <p>C#, Swift, TypeScript, Vue, Python, Rust, .NET, WPF, Electron, Deno, WebRTC, MLX, and visionOS.</p>
+      </section>
+
+      <details class="private">
+        <summary>Also private</summary>
+        <ul>
+          <li><strong>wpf-smoke</strong>: Build and launch WPF apps, capture startup diagnostics, and return agent-readable results.</li>
+          <li><strong>collective-platform</strong>: Outward Labs private ops: business site config, an ops relay, and a ChatBridge relay client.</li>
+          <li><strong>GuidedGrade</strong>: a local assignment-review workspace.</li>
+        </ul>
+        <!--
+          These repositories are private. Their GitHub URLs would 404 for visitors, so no repo links are listed.
+          No public metrics are cited.
+          Measured results still open: wpf-smoke startup diagnostic time, or tests passing; collective-platform agreed-wake reduction, or hook-to-relay latency.
+          Structure Lab is now listed above as a public work-in-progress product.
+        -->
+      </details>
 
       <!--
         Things I keep going back to
@@ -133,7 +197,8 @@
       <nav aria-label="Footer">
         <a href="https://github.com/signalnotnoise" rel="me">GitHub</a>
         <a href="https://x.com/signaln0tn0ise" rel="me">X @signaln0tn0ise</a>
-        <!-- LinkedIn is hidden until there is a real profile URL. Do not use a '#' placeholder. -->
+        <a href="https://www.linkedin.com/in/signalnotnoise" rel="me">LinkedIn</a>
+        <a href="https://huggingface.co/signalNotNoise" rel="me">Hugging Face</a>
         <!-- Contact is hidden until Alex chooses a public method. Do not publish an email address on this page until he confirms one for public use. -->
       </nav>
     </footer>
