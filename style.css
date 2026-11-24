@@ -1,0 +1,234 @@
+/* signalnotnoise.dev — static typographic page, no JS.
+   Dark / light follows prefers-color-scheme.
+   Sketch typography uses only system font stacks (no unloaded webfont names). */
+:root {
+  color-scheme: light dark;
+  --bg: #f7f4ee;
+  --ink: #1a1916;
+  --muted: #5e5a53;
+  --line: #d8d2c6;
+  --accent: #6b3f16;
+  --measure-bg: #efe8da;
+  --sans: "Segoe UI", system-ui, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --measure: 38rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12110f;
+    --ink: #f1ece4;
+    --muted: #b0a89c;
+    --line: #2c2a26;
+    --accent: #e0c08a;
+    --measure-bg: #1d1b17;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+  font-size: 1.02rem;
+}
+
+a { color: var(--accent); text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: min(var(--measure), calc(100% - 2.4rem));
+  margin: 0 auto;
+  padding: 2.75rem 0 3.5rem;
+}
+
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem 1.25rem;
+  flex-wrap: wrap;
+  margin: 0 0 0.85rem;
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-size: 0.92rem;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  margin: 0 0 0.95rem;
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--line);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.identity-text { min-width: 0; }
+h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.85rem, 5vw, 2.45rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0;
+}
+.aka {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.positioning {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  line-height: 1.4;
+  margin: 0 0 0.45rem;
+}
+
+.bio, .meta {
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+}
+.bio { color: var(--ink); }
+
+.cue {
+  margin: 0 0 1.5rem;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 1.28rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 2.4rem 0 0.8rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid var(--line);
+}
+
+.project { margin: 0 0 1.65rem; }
+.project h3 {
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.25rem;
+}
+.project .flags {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.45rem;
+}
+.project p { margin: 0 0 0.55rem; }
+.project .links {
+  font-size: 0.92rem;
+  margin: 0.35rem 0 0;
+}
+.project .links a + a { margin-left: 0.9rem; }
+
+.measure {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.95rem;
+  row-gap: 0.1rem;
+  align-items: baseline;
+  background: var(--measure-bg);
+  border-left: 3px solid var(--accent);
+  padding: 0.65rem 0.85rem;
+  margin: 0.15rem 0 0.35rem;
+  font-size: 0.95rem;
+}
+.measure .stat {
+  grid-row: 1 / 3;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+.measure .stat-label {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.measure .src {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.private {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.private summary {
+  cursor: pointer;
+  color: var(--muted);
+  width: fit-content;
+}
+.private summary:hover { color: var(--ink); }
+.private summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.private ul {
+  margin: 0.55rem 0 0;
+  padding-left: 1.15rem;
+}
+.private li { margin: 0.35rem 0; }
+.private li strong { color: var(--ink); font-weight: 650; }
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin: 0;
+}
+
+@media (max-width: 540px) {
+  .wrap { width: min(var(--measure), calc(100% - 1.5rem)); padding-top: 2rem; }
+  .identity { gap: 0.8rem; }
+  .measure {
+    grid-template-columns: 1fr;
+    row-gap: 0.25rem;
+  }
+  .measure .stat { grid-row: auto; margin-bottom: 0.1rem; }
+  .measure .src { grid-column: auto; }
+}
